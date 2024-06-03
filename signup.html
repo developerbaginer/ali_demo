@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up page</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="signup">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="socialcontainer">
+                    <a href="#" class="social"><img src="img/ficon1.webp" alt="icon?" style="width: 20px;"></a>
+                    <a href="#" class="social"><img src="img/gicon2.png" alt="icon?" style="width: 20px;"></a>
+                    <a href="#" class="social"><img src="img/licon3.png" alt="icon?" style="width: 20px;"></a>
+                </div>
+                <p>or use your email resgistration</p>
+                <input type="text" name="txt" placeholder="Name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
+        </div>   
+            <div class="signin">
+            <form action="#">
+                <h1>Sign In</h1>
+                <div class="socialcontainer">
+                    <a href="#" class="social"><img src="img/ficon1.webp" alt="icon?" style="width: 20px;"></a>
+                    <a href="#" class="social"><img src="img/gicon2.png" alt="icon?" style="width: 20px;"></a>
+                    <a href="#" class="social"><img src="img/licon3.png" alt="icon?" style="width: 20px;"></a>
+                </div>
+                <p>or use your account</p>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <a href="#">Forget your password</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlaycontainer">
+            <div class="overlay">
+                <div class="overlayleft">
+                    <h1>Wellcome back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button id="signIn">Sign In</button>
+                </div>
+                <div class="overlayright">
+                    <h1>Hello, Friend</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById('signUp')
+        const signInButton = document.getElementById('signIn')
+        const main = document.getElementById('main')
+
+        signUpButton.addEventListener('click', () =>{
+            main.classList.add("right-panel-active");
+        });
+        signInButton.addEventListener('click', () =>{
+            main.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+</html>
